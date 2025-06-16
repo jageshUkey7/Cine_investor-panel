@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CineinvestorInvestorPanelApplication<cineinvestor-investor-panel>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.abcm.ablepay.pg.CineinvestorInvestorPanelApplication",
+            "projectName": "cineinvestor-investor-panel",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

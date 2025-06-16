@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/cineinvestordb?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+server:
+  port: 7100
+  servlet:
+    session:
+      timeout: 30m
+  
+  
+aadharUrl: http://203.192.228.125:7081/ABCMKyc/api/v2/pl/aadhaar_initiate  
+optUrl: http://203.192.228.125:7081/ABCMKyc/api/v2/pl/aadhaar_submit  
+
+businessSaveOrUpdate : http://localhost:5200/businessDetails/saveOrUpdate
+businesCategory : http://localhost:5200/util/BCatList
+businesSubCategory : http://localhost:5200/util/SubCatList/
+websiteSave : http://localhost:5200/websiteDetails/saveOrUpdate
+
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, health, info
+  endpoint:
+    health:
+      show-details: always
+  prometheus:
+    metrics:
+      export:
+        enabled: true
